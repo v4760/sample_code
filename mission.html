@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Global Services – Mission (WP-safe)</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+@page { size: Letter; margin: 0; }
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Lora", serif; color: #333; }
+
+
+.page {
+  position: relative;
+  width: 8.5in;
+  height: 11in;
+  padding: 2.2in 1.5in 1.6in 3.1in;
+}
+
+/* ───── Sidebar with rotated label (fallback for writing-mode) ───── */
+.sidebar {
+  position: absolute;
+  left: 0; top: 0;
+  width: 2.2in; height: 100%;
+  background: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 30pt;
+  color: #C8102E;
+  /* rotate the whole word instead of using writing-mode */
+  transform: rotate(90deg);
+  /* Avoid affecting layout around it */
+  display: inline-block;
+}
+
+/* ───── Quarter-circle image using border-radius ───── */
+.circle-img {
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 26%;  /* tweak to taste */
+  height: 30%;
+  overflow: hidden;
+  border-bottom-left-radius: 10%; /* bottom-left quarter circle */
+}
+.circle-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+/* ───── Headings + body copy ───── */
+h2 { font: 700 16pt "Montserrat", sans-serif; text-transform: uppercase; margin: 0 0 .15in; }
+h1 { font: 700 34pt "Montserrat", sans-serif; color: #C8102E; margin: 0 0 .35in; }
+p  { font-size: 12pt; line-height: 1.55; max-width: 6.25in; }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="sidebar"><span>Mission</span></div>
+
+    <div class="circle-img">
+      <img src="northeastern.jpg" alt="NYU street scene">
+    </div>
+
+    <h2>Office of Global Services</h2>
+    <h1>Mission</h1>
+    <p>
+        The Office of Global Services (OGS) is an active resource to over 20,000 international students
+        and scholars from 147 different nations across the world. We provide the professional expertise 
+        and support you need to maintain compliance through immigration, academic, and your employment 
+        experiences—helping you remain a valuable member of the Northeastern community.
+
+        There are many different rules and regulations to be aware of when traveling to your campus 
+        destination, and it’s your responsibility to make sure you comply with these regulations. 
+        Please select your campus destination to learn more about what you need to do and when to 
+        arrive for your first day of class.
+    </p>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    /* --- PAGE BASICS --- */
+    body { font-family: Arial, sans-serif; margin: 20px; color: #333; }
+    h1   { color: #C8102E; margin-bottom: 25px; }
+
+    /* --- DONUT-CHART STRIP --- */
+    .donut-row{
+      /* grid guarantees one tidy row that never wraps  */
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);   /* 3 equal columns  */
+      gap: 12px;                               /* space between charts */
+      align-items:center;                      /* vertical centring  */
+      margin-bottom: 45px;                     /* spacing under the row */
+    }
+    .donut-row img{
+      width: 160px;        /* small enough to fit on A4/Letter portrait */
+      height:auto;
+      display:block;       /* removes extra inline-img whitespace */
+      margin: 0 auto;      /* centres inside the grid cell            */
+    }
+
+    /* --- PROGRAM LISTS --- */
+    .section       { margin-bottom: 40px; }
+    .programs div  { margin: 4px 0; }
+  </style>
+</head>
+<body>
+  <h1>International Students Overview</h1>
+
+  <!--  DONUT CHARTS  -->
+  <div class="donut-row">
+    <img src="/Users/vikaskagawad/My Documents/OgsProject/static/charts/gender_chart.png"         alt="Gender Chart">
+    <img src="/Users/vikaskagawad/My Documents/OgsProject/static/charts/academic_level_chart.png" alt="Academic Level Chart">
+    <img src="/Users/vikaskagawad/My Documents/OgsProject/static/charts/visa_type_chart.png"      alt="Visa Type Chart">
+  </div>
+
+  <!--  UNDERGRAD PROGRAMS  -->
+  <div class="section">
+    <h2>Top Undergraduate Programs</h2>
+    <div class="programs">
+      {% for name, school, count in data.undergrad_programs %}
+        <div><strong>{{ loop.index }}.</strong> {{ school }}, <em>{{ name }}</em> — {{ count }}</div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!--  GRAD PROGRAMS  -->
+  <div class="section">
+    <h2>Top Graduate Programs</h2>
+    <div class="programs">
+      {% for name, school, count in data.grad_programs %}
+        <div><strong>{{ loop.index }}.</strong> {{ school }}, <em>{{ name }}</em> — {{ count }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>
