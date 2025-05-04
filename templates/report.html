@@ -3,29 +3,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <base href="{{ base_href }}">
   <meta charset="utf-8">
   <style>
-    /* --- PAGE BASICS --- */
+  
     body { font-family: Arial, sans-serif; margin: 20px; color: #333; }
     h1   { color: #C8102E; margin-bottom: 25px; }
 
-    /* --- DONUT-CHART STRIP --- */
+
     .donut-row{
-      /* grid guarantees one tidy row that never wraps  */
       display:grid;
-      grid-template-columns: repeat(3, 1fr);   /* 3 equal columns  */
-      gap: 12px;                               /* space between charts */
-      align-items:center;                      /* vertical centring  */
-      margin-bottom: 45px;                     /* spacing under the row */
+      grid-template-columns: repeat(3, 1fr);   
+      gap: 12px;                              
+      align-items:center;                    
+      margin-bottom: 45px;                     
     }
     .donut-row img{
-      width: 160px;        /* small enough to fit on A4/Letter portrait */
+      width: 160px;        
       height:auto;
-      display:block;       /* removes extra inline-img whitespace */
-      margin: 0 auto;      /* centres inside the grid cell            */
+      display:block;       
+      margin: 0 auto;     
     }
 
-    /* --- PROGRAM LISTS --- */
+
     .section       { margin-bottom: 40px; }
     .programs div  { margin: 4px 0; }
   </style>
@@ -35,9 +35,9 @@
 
   <!--  DONUT CHARTS  -->
   <div class="donut-row">
-    <img src="/Users/vikaskagawad/My Documents/OgsProject/static/charts/gender_chart.png"         alt="Gender Chart">
-    <img src="/Users/vikaskagawad/My Documents/OgsProject/static/charts/academic_level_chart.png" alt="Academic Level Chart">
-    <img src="/Users/vikaskagawad/My Documents/OgsProject/static/charts/visa_type_chart.png"      alt="Visa Type Chart">
+    <img src="static/charts/gender_chart.png"         alt="Gender Chart">
+    <img src="static/charts/academic_level_chart.png" alt="Academic Level Chart">
+    <img src="static/charts/visa_type_chart.png"      alt="Visa Type Chart">
   </div>
 
   <!--  UNDERGRAD PROGRAMS  -->
